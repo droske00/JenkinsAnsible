@@ -1,2 +1,2 @@
 [all]
-node1 asnible_ssh_host=157.230.119.63 ansible_user=root
+node1 ansible_ssh_host=157.230.119.63 ansible_user=root
