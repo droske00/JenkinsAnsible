@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Clone Repo') {
       steps {
-         git 'https://github.com/droske00/JenkinsAnsible.git'
+         sh 'git clone https://github.com/droske00/JenkinsAnsible.git'
       }
     }
     stage('httpd') {
