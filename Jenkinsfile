@@ -1,11 +1,11 @@
 pipeline {
   agent { label 'linux' }
   stages {
-    stage('Clone Repo') {
+   /* stage('Clone Repo') {
       steps {
          sh 'git clone https://github.com/droske00/JenkinsAnsible.git'
       }
-    }
+    } */
     stage('httpd') {
       steps {
         sh 'ansible-playbook -i inventory httpd.yml'
