@@ -8,7 +8,7 @@ pipeline {
     } */
     stage('httpd') {
       steps { 
-        sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i inventory httpd.yml'
+        sh 'ansible-playbook -i inventory httpd.yml'
       }
     }
   }
