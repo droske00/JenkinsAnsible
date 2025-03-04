@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('httpd') {
       steps {
-        sh 'ansible-playbook -i node1 httpd.yml'
+        sh 'ansible-playbook -i webservers httpd.yml'
       }
     }
   }
