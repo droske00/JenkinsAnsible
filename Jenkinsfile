@@ -8,6 +8,7 @@ pipeline {
     } */
     stage('httpd') {
       steps {
+        sshagent(['3']) 
         sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i inventory httpd.yml'
       }
     }
