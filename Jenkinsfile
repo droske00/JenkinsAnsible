@@ -11,7 +11,9 @@ pipeline {
     } */
     stage('httpd') {
       steps { 
-        sh 'ansible-playbook -i inventory httpd.yml'
+        sh """
+             ansible-playbook -i inventory httpd.yml --extra-vars "ansible_user=${MY_CREDENTIALS_USR} ansible_password=${MY_CREDENTIALS_PSW}"
+         """
       }
     }
   }
