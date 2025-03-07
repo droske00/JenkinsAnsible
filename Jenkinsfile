@@ -1,5 +1,8 @@
 pipeline {
   agent { label 'linux' }
+      environment {
+        MY_CREDENTIALS = credentials('1')  // ID kredencijala
+    }
   stages {
    /* stage('Clone Repo') {
       steps {
